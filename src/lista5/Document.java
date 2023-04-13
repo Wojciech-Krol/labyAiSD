@@ -128,7 +128,7 @@ public String toString() {
 	public void bubbleSort(int[] weights){
 		int n=weights.length;
 		showArray(weights);
-		for(int i=0;i<n;i++){
+		for(int i=0;i<n-1;i++){
 			for(int j=n-1;j>0;j--){
 				if(weights[j-1]>weights[j]){
 					int temp=weights[j-1];
