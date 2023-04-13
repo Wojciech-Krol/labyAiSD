@@ -142,19 +142,15 @@ public String toString() {
 	public void selectSort(int[] weights){
 		int n = weights.length;
 		showArray(weights);
-		// One by one move boundary of unsorted subarray
 		for (int i = n-1; i >0; i--)
 		{
-			// Find the minimum element in unsorted array
-			int max_idx = i;
+			int max= i;
 			for (int j = i-1; j >=0; j--)
-				if (weights[j]>weights[max_idx])
-					max_idx = j;
+				if (weights[j]>weights[max])
+					max = j;
 
-			// Swap the found minimum element with the first
-			// element
-			int temp = weights[max_idx];
-			weights[max_idx] = weights[i];
+			int temp = weights[max];
+			weights[max] = weights[i];
 			weights[i] = temp;
 			showArray(weights);
 		}
